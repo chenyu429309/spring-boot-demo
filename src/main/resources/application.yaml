@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    username: postgres
+    password: 111111
+    url: jdbc:postgresql://192.168.92.128/postgres?currentSchema=quartz&prepareThreshold=0&useUnicode=true&characterEncoding=UTF-8
+  redis:
+    database: 0
+    password: 111111
+    port: 6379
+    host: 192.168.92.128
+  cache:
+    cache-names: test
+    type: redis
+    redis:
+      time-to-live: 100000
+      key-prefix: test
+      use-key-prefix: true
+      cache-null-values: true
+server:
+  port: 8888
+
+mybatis:
+  type-aliases-package: com.felix.springbootdemo.mapper
+logging:
+  level:
+    com.felix.springbootdemo.mapper: debug

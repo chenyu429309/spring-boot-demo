@@ -1,13 +1,16 @@
-package com.felix.springbootdemo.config;
+package com.felix.springbootdemo.handlers;
 
 import com.felix.springbootdemo.model.ResponseModel;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
 
-@RestControllerAdvice
+@Slf4j
+@RestControllerAdvice(annotations = RestController.class)
 @Data
 public class GlobalExceptionHandler {
     private HttpServletRequest request;
@@ -23,6 +26,7 @@ public class GlobalExceptionHandler {
         this.request = request;
         this.message = message;
         this.exception = exception;
+        log.error("{}", exception);
         return new ResponseModel().setKey(ResponseModel.ERROR)
                 .setMsg(message);
     }

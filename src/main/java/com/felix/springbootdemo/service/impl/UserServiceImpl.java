@@ -9,6 +9,9 @@ import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,9 +22,10 @@ import java.util.Optional;
  * @author felix
  */
 
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @Service
 @Slf4j
-@Transactional
+@CacheConfig(cacheNames = "user")
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
@@ -33,7 +37,7 @@ public class UserServiceImpl implements UserService {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    @Cacheable(value = "user", key = "'test'+#id", unless = "#result!=null")
+    @Cacheable(unless = "#result == null")
     @Override
     public User getUser(Integer id) {
         Optional<User> user = Optional.ofNullable(userMapper.getOne(id));
@@ -41,6 +45,7 @@ public class UserServiceImpl implements UserService {
         return user.orElse(null);
     }
 
+    @Cacheable(unless = "#result == null")
     @Override
     public PageInfo<User> getAll() {
         // TODO 分页 + 排序 this.userMapper.selectAll() 这一句就是我们需要写的查询，有了这两款插件无缝切换各种数据库
@@ -53,5 +58,28 @@ public class UserServiceImpl implements UserService {
         log.info("[普通写法] - [{}]", userPageInfo);
 
         return userPageInfo;
+    }
+
+    @Transactional
+    @CachePut(key = "getTargetClass()+#user.id")
+    @Override
+    public User insert(User user) {
+        this.userMapper.insert(user);
+        return user;
+    }
+
+    @Transactional
+    @CachePut(key = "getTargetClass()+#user.id")
+    @Override
+    public User update(User user) {
+        this.userMapper.update(user);
+        return user;
+    }
+
+    @Transactional
+    @CacheEvict(key = "#user.id")
+    @Override
+    public User delete(Integer id) {
+        return this.userMapper.delete(id);
     }
 }

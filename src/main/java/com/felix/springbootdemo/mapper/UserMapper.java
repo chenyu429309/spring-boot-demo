@@ -23,13 +23,13 @@ public interface UserMapper {
     @ResultMap("userMapper")
     User getOne(@Param("id") Integer id);
 
-    @Insert("INSERT INTO public.users(userName,passWord,user_sex) VALUES(#{userName}, #{passWord}, #{userSex})")
+    @Insert("INSERT INTO public.users(id,name,age,user_sex,created_at,updated_at) VALUES(#{id},#{name}, #{age}, #{userSex},#{createdAt},#{updatedAt})")
     void insert(User user);
 
-    @Update("UPDATE public.users SET userName=#{name},age=#{age} WHERE id =#{id}")
+    @Update("UPDATE public.users SET name=#{name},age=#{age} WHERE id =#{id}")
     void update(User user);
 
     @Delete("DELETE FROM public.users WHERE id =#{id}")
-    void delete(Integer id);
+    User delete(Integer id);
 
 }

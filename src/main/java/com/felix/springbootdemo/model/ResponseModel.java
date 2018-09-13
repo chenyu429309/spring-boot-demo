@@ -15,4 +15,7 @@ public class ResponseModel<T> {
     public static ResponseModel ok(Object o) {
         return new ResponseModel().setT(o).setKey(OK);
     }
+    public static ResponseModel error(Object o) {
+        return new ResponseModel().setT(o).setKey(ERROR);
+    }
 }

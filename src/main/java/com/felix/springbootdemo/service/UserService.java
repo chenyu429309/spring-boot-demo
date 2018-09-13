@@ -7,4 +7,10 @@ public interface UserService {
     User getUser(Integer id);
 
     PageInfo<User> getAll();
+
+    User insert(User user);
+
+    User update(User user);
+
+    User delete(Integer id);
 }

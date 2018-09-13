@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    username: postgresuser
+    password: sonic333
+    url: jdbc:postgresql://192.168.0.2/yiye_test?currentSchema=quartz&prepareThreshold=0&useUnicode=true&characterEncoding=UTF-8
+  redis:
+    database: 0
+    password: thisisredis
+    port: 9999
+    host: 192.168.0.3
+    lettuce:
+      pool:
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-wait: -1s
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-active: 8
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 0
+  cache:
+    cache-names: test
+    type: redis
+    redis:
+      time-to-live: 100000s
+      key-prefix: test
+      use-key-prefix: true
+      cache-null-values: true
+
+  rabbitmq:
+    host: 192.168.0.3
+    username: rabbithlt
+    password: sonic333
+    port: 5673
+    virtual-host: yiye_dev
+    # 手动ACK 不开启自动ACK模式,目的是防止报错后未正确处理消息丢失 默认 为 none
+    listener:
+      simple:
+        acknowledge-mode: manual
+      #template:
+      # exchange: hat.direct.exchange
+server:
+  port: 9999
+

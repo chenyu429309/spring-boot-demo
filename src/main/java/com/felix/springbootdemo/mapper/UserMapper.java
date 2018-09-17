@@ -1,6 +1,7 @@
 package com.felix.springbootdemo.mapper;
 
 import com.felix.springbootdemo.enums.UserSexEnum;
+import com.felix.springbootdemo.model.PageData;
 import com.felix.springbootdemo.model.User;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.annotations.Param;
@@ -13,11 +14,9 @@ public interface UserMapper {
 
     @Select("SELECT * FROM public.users")
     @Results(id = "userMapper", value = {
-            @Result(property = "userSex", column = "user_sex", javaType = UserSexEnum.class),
-            @Result(property = "updatedAt", column = "updated_at", javaType = LocalDateTime.class),
-            @Result(property = "createdAt", column = "created_at", javaType = LocalDateTime.class)
+            @Result(property = "userSex", column = "user_sex", javaType = UserSexEnum.class)
     })
-    List<User> getAll();
+    List<User> getAll(PageData pageData);
 
     @Select("SELECT * FROM public.users WHERE id = #{id}")
     @ResultMap("userMapper")
@@ -30,6 +29,6 @@ public interface UserMapper {
     void update(User user);
 
     @Delete("DELETE FROM public.users WHERE id =#{id}")
-    User delete(Integer id);
+    void delete(@Param("id") Integer id);
 
 }

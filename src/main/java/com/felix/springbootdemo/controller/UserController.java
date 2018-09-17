@@ -1,5 +1,6 @@
 package com.felix.springbootdemo.controller;
 
+import com.felix.springbootdemo.model.PageData;
 import com.felix.springbootdemo.model.ResponseModel;
 import com.felix.springbootdemo.model.User;
 import com.felix.springbootdemo.service.UserService;
@@ -11,10 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -34,13 +32,13 @@ public class UserController {
     }
 
     @GetMapping(value = "/get_all")
-    @ApiOperation(value = "全部查询（DONE）")
-    public ResponseModel<PageInfo> getAll() {
-        return ResponseModel.ok(userService.getAll());
+    @ApiOperation(value = "按条件查询（DONE）")
+    public ResponseModel<PageInfo> getAll(PageData pageData) {
+        return ResponseModel.ok(userService.getAll(pageData));
     }
 
-    @GetMapping(value = "/update")
-    @ApiOperation(value = "全部查询（DONE）")
+    @PutMapping(value = "/update")
+    @ApiOperation(value = "更新（DONE）")
     public ResponseModel<User> update(@Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             log.error("{}", bindingResult.getFieldError().getDefaultMessage());
@@ -49,8 +47,8 @@ public class UserController {
         return ResponseModel.ok(userService.update(user));
     }
 
-    @GetMapping(value = "/insert")
-    @ApiOperation(value = "全部查询（DONE）")
+    @PostMapping(value = "/insert")
+    @ApiOperation(value = "插入（DONE）")
     public ResponseModel<Integer> insert(@Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             log.error("{}", bindingResult.getFieldError().getDefaultMessage());
@@ -59,7 +57,7 @@ public class UserController {
         return ResponseModel.ok(userService.insert(user));
     }
 
-    @GetMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     @ApiOperation(value = "全部查询（DONE）")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id", value = "用户ID", dataType = "int", paramType = "path")})

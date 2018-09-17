@@ -2,6 +2,7 @@ package com.felix.springbootdemo.service.impl;
 
 import com.felix.springbootdemo.interfaces.QueueConstants;
 import com.felix.springbootdemo.mapper.UserMapper;
+import com.felix.springbootdemo.model.PageData;
 import com.felix.springbootdemo.model.User;
 import com.felix.springbootdemo.service.UserService;
 import com.github.pagehelper.PageHelper;
@@ -9,10 +10,7 @@ import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,7 +35,7 @@ public class UserServiceImpl implements UserService {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    @Cacheable(unless = "#result == null")
+    @Cacheable(unless = "#result == null", key = "#id")
     @Override
     public User getUser(Integer id) {
         Optional<User> user = Optional.ofNullable(userMapper.getOne(id));
@@ -45,23 +43,26 @@ public class UserServiceImpl implements UserService {
         return user.orElse(null);
     }
 
-    @Cacheable(unless = "#result == null")
+    @Cacheable(unless = "#result == null", key = "'all'")
     @Override
-    public PageInfo<User> getAll() {
+    public PageInfo<User> getAll(PageData pageData) {
         // TODO 分页 + 排序 this.userMapper.selectAll() 这一句就是我们需要写的查询，有了这两款插件无缝切换各种数据库
-        final PageInfo<Object> pageInfo = PageHelper.startPage(1, 10)
-                .setOrderBy("id desc").doSelectPageInfo(() -> this.userMapper.getAll());
+        final PageInfo<User> pageInfo = PageHelper.startPage(pageData.getPageNum(), pageData.getPageSize())
+                .setOrderBy(pageData.getOrderBy()).doSelectPageInfo(() -> this.userMapper.getAll(pageData));
         log.info("[lambda写法] - [分页信息] - [{}]", pageInfo.toString());
 
-        PageHelper.startPage(1, 10).setOrderBy("id desc");
-        final PageInfo<User> userPageInfo = new PageInfo<>(this.userMapper.getAll());
-        log.info("[普通写法] - [{}]", userPageInfo);
+//        PageHelper.startPage(1, 10).setOrderBy("id desc");
+//        final PageInfo<User> userPageInfo = new PageInfo<>(this.userMapper.getAll());
+//        log.info("[普通写法] - [{}]", userPageInfo);
 
-        return userPageInfo;
+        return pageInfo;
     }
 
     @Transactional
-    @CachePut(key = "getTargetClass()+#user.id")
+    @Caching(
+            cacheable = {@Cacheable(key = "#user.id")},
+            evict = {@CacheEvict(key = "'all'")}
+    )
     @Override
     public User insert(User user) {
         this.userMapper.insert(user);
@@ -69,7 +70,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Transactional
-    @CachePut(key = "getTargetClass()+#user.id")
+//    @CachePut(key = "#user.id")
+    @Caching(
+            put = {@CachePut(key = "#user.id")},
+            evict = {@CacheEvict(key = "'all'")}
+    )
     @Override
     public User update(User user) {
         this.userMapper.update(user);
@@ -77,9 +82,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Transactional
-    @CacheEvict(key = "#user.id")
+    @CacheEvict(key = "#id")
     @Override
     public User delete(Integer id) {
-        return this.userMapper.delete(id);
+        User user = getUser(id);
+        this.userMapper.delete(id);
+        return user;
     }
 }

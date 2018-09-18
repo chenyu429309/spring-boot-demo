@@ -19,3 +19,7 @@
     kill -USR2 23882  重新开启 新的主线程 23882 为 nginx以及开启 的主进程
     kill -WINCH 23882 停止监听
     kill -QUIT 23882
+
+
+重启和指定文件位置
+    /data/app/opentresty_nginx/bin/openresty -p /data/projects/nginx_lua -c /data/projects/nginx_lua/conf/nginx_yiye_test.conf -s reload

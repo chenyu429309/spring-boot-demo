@@ -99,7 +99,32 @@
         </dependency>
 
     </dependencies>
-
+    <!--声明远程仓库-->
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://192.168.92.128:8081/repository/java/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <url>http://192.168.92.128:8081/repository/java/
+            </url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
     <build>
         <resources>
             <resource>

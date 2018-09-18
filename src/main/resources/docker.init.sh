@@ -21,7 +21,7 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors": ["https://3itj1ym2.mirror.aliyuncs.com"],
-  "insecure-registries": ["192.168.0.7:5000","192.168.168.131:5000"],
+  "insecure-registries": ["192.168.0.7","192.168.168.131"],
   "hosts": [
     "tcp://0.0.0.0:2375",
     "unix:///var/run/docker.sock"
@@ -35,8 +35,13 @@ sudo systemctl start docker
 sudo systemctl enable docker
 # step 7: 配置当前用户对docker命令的执行权限
 sudo groupadd docker
+#免密登录
 sudo gpasswd -a ${USER} docker
 sudo usermod -aG docker ${USER}
 sudo systemctl restart docker
+
+docker run -d --name="openresty" -p 80:80 -v /usr/local/openresty/nginx/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro -v /usr/local/openresty/nginx/logs/Work/opt/local/openresty/logs:/usr/local/openresty/nginx/logs -v /user/local/openresty/conf.d:/etc/nginx/conf.d -v /user/local/openresty/html:/etc/nginx/html openresty/openresty:alpine
+
+
 
 

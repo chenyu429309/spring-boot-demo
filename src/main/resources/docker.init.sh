@@ -21,7 +21,7 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors": ["https://3itj1ym2.mirror.aliyuncs.com"],
-  "insecure-registries": ["192.168.0.7","192.168.168.131"],
+  "insecure-registries": ["192.168.199.116"],
   "hosts": [
     "tcp://0.0.0.0:2375",
     "unix:///var/run/docker.sock"

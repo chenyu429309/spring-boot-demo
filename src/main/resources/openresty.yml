@@ -12,7 +12,7 @@ services:
     - /data/openresty/ssl:/usr/local/openresty/nginx/ssl \
     - /data/openresty/html:/etc/nginx/html openresty/openresty:alpine
     ports:
-    - 80:80
+    - 8080:80
     - 443:443
 
 

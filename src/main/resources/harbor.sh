@@ -8,7 +8,7 @@ sudo docker run -p 389:389 --env LDAP_ORGANISATION="My Company" --env LDAP_DOMAI
 http://harbor.orientsoft.cn/harbor-v1.4.0/harbor-offline-installer-v1.4.0.tgz
 sudo tar -zxvf harbor-offline-installer-v1.5.0.tgz
 # step 3：harbor安装（去官方网址下载最新的）
-wget http://harbor.orientsoft.cn/harbor-v1.5.0/harbor-offline-installer-v1.4.0.tgz
+wget http://harbor.orientsoft.cn/harbor-v1.5.0/harbor-offline-installer-v1.5.0.tgz
 sudo tar -zxvf harbor-offline-installer-v1.5.0.tgz
 # step 4：ldap认证模式
 cd harbor

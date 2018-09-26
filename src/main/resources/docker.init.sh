@@ -28,6 +28,7 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
   ]
 }
 EOF
+sudo chmod -R 777 /var/run/docker.sock
 # step 5: 重启daemon-reload
 sudo systemctl daemon-reload
 # step 6: 启动docker并配置开机启动

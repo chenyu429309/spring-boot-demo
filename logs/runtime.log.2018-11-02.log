@@ -1,0 +1,7 @@
+2018-11-02 13:42:29.522 [main] INFO  c.f.s.test.CopyOnWriteArrayListExample - size:4915
+2018-11-02 13:42:41.175 [main] INFO  c.f.s.test.CopyOnWriteArrayListExample - size:4949
+2018-11-02 13:42:46.296 [main] INFO  c.f.s.test.CopyOnWriteArrayListExample - size:4938
+2018-11-02 13:42:48.314 [main] INFO  c.f.s.test.CopyOnWriteArrayListExample - size:4948
+2018-11-02 13:43:35.614 [main] INFO  c.f.s.test.CopyOnWriteArrayListExample - size:5000
+2018-11-02 13:43:38.898 [main] INFO  c.f.s.test.CopyOnWriteArrayListExample - size:5000
+2018-11-02 13:43:41.439 [main] INFO  c.f.s.test.CopyOnWriteArrayListExample - size:5000

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.felix.springbootdemo.mapper.UsersMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.felix.springbootdemo.entity.Users">
+    <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="column_3" property="column3" />
+        <result column="age" property="age" />
+        <result column="user_sex" property="userSex" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="version" property="version" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        name, column_3, age, user_sex, created_at, updated_at, version
+    </sql>
+    <update id="updateByName">
+
+    </update>
+    <select id="selectByName" resultType="com.felix.springbootdemo.entity.Users">
+
+    </select>
+
+</mapper>

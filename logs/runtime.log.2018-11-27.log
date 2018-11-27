@@ -1,0 +1,389 @@
+2018-11-27 09:15:17.837 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@4287d447
+2018-11-27 09:58:04.382 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@39aa45a1
+2018-11-27 13:30:23.660 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-27 13:30:23.667 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-27 13:30:23.668 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-27 13:30:23.773 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-27 13:30:23.867 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-27 13:30:23.881 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35aea049, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7205765b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47987356, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@22ef9844, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6283d8b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b6ddd1d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3f6b0be5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@611889f4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1da2cb77, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48f278eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f217633, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@a530d0a]
+2018-11-27 13:30:24.297 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 15501 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-27 13:30:24.298 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-27 13:30:25.195 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:30:25.195 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:30:25.195 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-27 13:30:25.344 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-27 13:30:25.347 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-27 13:30:25.385 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2018-11-27 13:30:25.944 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$8e98838a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:30:26.041 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c82cc55c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:30:28.515 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-27 13:30:28.952 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:30:30.800 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-27 13:30:30.907 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-27 13:30:31.057 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-27 13:30:31.061 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2018-11-27 13:30:31.262 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-27 13:30:31.262 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-27 13:30:31.266 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-27 13:30:31.268 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-27 13:30:31.269 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543296631060'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-27 13:30:31.269 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-27 13:30:31.269 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-27 13:30:31.269 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@4d5ea776
+2018-11-27 13:30:31.351 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-27 13:30:31.445 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-27 13:30:31.463 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-27 13:30:31.497 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-27 13:30:31.692 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-27 13:30:31.703 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-27 13:30:31.703 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1543203045808"'s failed in-progress jobs.
+2018-11-27 13:30:31.710 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-11-27 13:30:31.712 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296631060 started.
+2018-11-27 13:30:31.721 [QuartzScheduler_clusteredScheduler-felix1543296631060_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-27 13:30:31.737 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Started SpringBootDemoApplicationTests in 7.82 seconds (JVM running for 8.735)
+2018-11-27 13:30:32.113 [pool-3-thread-13] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2018-11-27 13:30:32.114 [pool-3-thread-13] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2018-11-27 13:30:38.404 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - MathTest：com.felix.springbootdemo.test.MathTest@5b0dbfb
+2018-11-27 13:30:38.449 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296631060 paused.
+2018-11-27 13:30:38.461 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-27 13:30:38.462 [Thread-6] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-27 13:30:38.462 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296631060 shutting down.
+2018-11-27 13:30:38.462 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296631060 paused.
+2018-11-27 13:30:38.472 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296631060 shutdown complete.
+2018-11-27 13:30:38.474 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:30:43.783 [clusteredScheduler_Worker-2] ERROR org.quartz.simpl.SimpleThreadPool - Error while executing the Runnable: 
+java.lang.IllegalStateException: JobStore is shutdown - aborting retry
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.retryExecuteInNonManagedTXLock(JobStoreSupport.java:3818)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.triggeredJobComplete(JobStoreSupport.java:3101)
+	at org.quartz.core.QuartzScheduler.notifyJobStoreJobComplete(QuartzScheduler.java:1780)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:269)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2018-11-27 13:31:36.649 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-27 13:31:36.654 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-27 13:31:36.655 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-27 13:31:36.786 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-27 13:31:36.884 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-27 13:31:36.902 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35aea049, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7205765b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47987356, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@22ef9844, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6283d8b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b6ddd1d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3f6b0be5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@611889f4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1da2cb77, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48f278eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f217633, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@a530d0a]
+2018-11-27 13:31:37.287 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 20614 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-27 13:31:37.287 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-27 13:31:38.001 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:31:38.002 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:31:38.002 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-27 13:31:38.156 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-27 13:31:38.158 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-27 13:31:38.202 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2018-11-27 13:31:38.706 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$8e98838a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:31:38.783 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c82cc55c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:31:41.281 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-27 13:31:41.671 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:31:43.362 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-27 13:31:43.432 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-27 13:31:43.754 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-27 13:31:43.758 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2018-11-27 13:31:43.787 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-27 13:31:43.788 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-27 13:31:43.791 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-27 13:31:43.794 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-27 13:31:43.795 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543296703757'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-27 13:31:43.795 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-27 13:31:43.795 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-27 13:31:43.795 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@4d5ea776
+2018-11-27 13:31:43.882 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-27 13:31:43.979 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-27 13:31:43.995 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-27 13:31:44.026 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-27 13:31:44.217 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-27 13:31:44.223 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-27 13:31:44.223 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1543296631060"'s failed in-progress jobs.
+2018-11-27 13:31:44.228 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-11-27 13:31:44.230 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296703757 started.
+2018-11-27 13:31:44.235 [QuartzScheduler_clusteredScheduler-felix1543296703757_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-27 13:31:44.251 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Started SpringBootDemoApplicationTests in 7.312 seconds (JVM running for 8.217)
+2018-11-27 13:31:44.551 [pool-3-thread-20] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2018-11-27 13:31:44.552 [pool-3-thread-20] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2018-11-27 13:31:47.539 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - MathTest：com.felix.springbootdemo.test.MathTest@5b0dbfb
+2018-11-27 13:31:47.685 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296703757 paused.
+2018-11-27 13:31:47.694 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-27 13:31:47.695 [Thread-6] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-27 13:31:47.695 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296703757 shutting down.
+2018-11-27 13:31:47.695 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296703757 paused.
+2018-11-27 13:31:47.702 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296703757 shutdown complete.
+2018-11-27 13:31:47.703 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:31:48.868 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-11-27 13:31:48.906 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-11-27 13:32:15.720 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-27 13:32:15.724 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-27 13:32:15.726 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-27 13:32:15.823 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-27 13:32:15.911 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-27 13:32:15.923 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35aea049, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7205765b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47987356, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@22ef9844, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6283d8b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b6ddd1d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3f6b0be5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@611889f4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1da2cb77, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48f278eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f217633, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@a530d0a]
+2018-11-27 13:32:16.242 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 25370 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-27 13:32:16.242 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-27 13:32:16.956 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:32:16.956 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:32:16.957 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-27 13:32:17.099 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-27 13:32:17.101 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-27 13:32:17.130 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2018-11-27 13:32:17.573 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$8e98838a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:32:17.664 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c82cc55c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:32:19.984 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-27 13:32:20.309 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:32:21.774 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-27 13:32:21.847 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-27 13:32:21.934 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-27 13:32:21.937 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2018-11-27 13:32:22.145 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-27 13:32:22.145 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-27 13:32:22.150 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-27 13:32:22.152 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-27 13:32:22.153 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543296741936'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-27 13:32:22.153 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-27 13:32:22.153 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-27 13:32:22.153 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@39004e4f
+2018-11-27 13:32:22.211 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-27 13:32:22.290 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-27 13:32:22.306 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-27 13:32:22.338 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-27 13:32:22.530 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-27 13:32:22.535 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-27 13:32:22.535 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1543296703757"'s failed in-progress jobs.
+2018-11-27 13:32:22.540 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-11-27 13:32:22.547 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296741936 started.
+2018-11-27 13:32:22.563 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Started SpringBootDemoApplicationTests in 6.612 seconds (JVM running for 7.456)
+2018-11-27 13:32:22.862 [pool-3-thread-13] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2018-11-27 13:32:22.863 [pool-3-thread-13] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2018-11-27 13:32:25.743 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - MathTest：com.felix.springbootdemo.test.MathTest@b5aa65b
+2018-11-27 13:32:25.870 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296741936 paused.
+2018-11-27 13:32:25.879 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-27 13:32:25.879 [Thread-6] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-27 13:32:25.879 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296741936 shutting down.
+2018-11-27 13:32:25.879 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296741936 paused.
+2018-11-27 13:32:25.892 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296741936 shutdown complete.
+2018-11-27 13:32:25.893 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:32:27.184 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-11-27 13:32:27.225 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-11-27 13:33:24.074 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-27 13:33:24.080 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-27 13:33:24.081 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-27 13:33:24.172 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-27 13:33:24.258 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-27 13:33:24.273 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35aea049, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7205765b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47987356, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@22ef9844, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6283d8b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b6ddd1d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3f6b0be5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@611889f4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1da2cb77, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48f278eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f217633, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@a530d0a]
+2018-11-27 13:33:24.576 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 31741 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-27 13:33:24.576 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-27 13:33:25.211 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:33:25.214 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:33:25.214 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-27 13:33:25.359 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-27 13:33:25.361 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-27 13:33:25.389 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2018-11-27 13:33:25.855 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$8e98838a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:33:25.930 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c82cc55c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:33:27.949 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-27 13:33:28.286 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:33:29.868 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-27 13:33:29.957 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-27 13:33:30.046 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-27 13:33:30.049 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2018-11-27 13:33:30.346 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-27 13:33:30.346 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-27 13:33:30.350 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-27 13:33:30.353 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-27 13:33:30.354 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543296810049'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-27 13:33:30.355 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-27 13:33:30.355 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-27 13:33:30.355 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@5059d398
+2018-11-27 13:33:30.416 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-27 13:33:30.502 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-27 13:33:30.518 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-27 13:33:30.550 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-27 13:33:30.743 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-27 13:33:30.748 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-27 13:33:30.748 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1543296741936"'s failed in-progress jobs.
+2018-11-27 13:33:30.752 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-11-27 13:33:30.754 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296810049 started.
+2018-11-27 13:33:30.759 [QuartzScheduler_clusteredScheduler-felix1543296810049_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-27 13:33:30.772 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Started SpringBootDemoApplicationTests in 6.465 seconds (JVM running for 7.381)
+2018-11-27 13:33:31.063 [pool-3-thread-5] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2018-11-27 13:33:31.064 [pool-3-thread-5] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2018-11-27 13:33:32.468 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - MathTest：com.felix.springbootdemo.test.MathTest@62b6c045
+2018-11-27 13:33:32.547 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296810049 paused.
+2018-11-27 13:33:32.558 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-27 13:33:32.558 [Thread-6] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-27 13:33:32.558 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296810049 shutting down.
+2018-11-27 13:33:32.558 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296810049 paused.
+2018-11-27 13:33:32.574 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296810049 shutdown complete.
+2018-11-27 13:33:32.576 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:33:35.028 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-11-27 13:33:35.064 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-11-27 13:34:05.757 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-27 13:34:05.761 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-27 13:34:05.763 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-27 13:34:05.874 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-27 13:34:05.984 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-27 13:34:06.001 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35aea049, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7205765b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47987356, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@22ef9844, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6283d8b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b6ddd1d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3f6b0be5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@611889f4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1da2cb77, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48f278eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f217633, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@a530d0a]
+2018-11-27 13:34:06.301 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 4433 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-27 13:34:06.302 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-27 13:34:07.076 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:34:07.077 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:34:07.077 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-27 13:34:07.228 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-27 13:34:07.231 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-27 13:34:07.266 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2018-11-27 13:34:07.711 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$4360aa56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:34:07.777 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7cf4ec28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:34:09.753 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-27 13:34:10.090 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:34:11.654 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-27 13:34:11.727 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-27 13:34:11.816 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-27 13:34:11.819 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2018-11-27 13:34:12.049 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-27 13:34:12.049 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-27 13:34:12.053 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-27 13:34:12.057 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-27 13:34:12.058 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543296851818'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-27 13:34:12.058 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-27 13:34:12.058 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-27 13:34:12.059 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@434ee422
+2018-11-27 13:34:12.140 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-27 13:34:12.220 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-27 13:34:12.236 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-27 13:34:12.268 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-27 13:34:12.446 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-27 13:34:12.451 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-27 13:34:12.452 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1543296810049"'s failed in-progress jobs.
+2018-11-27 13:34:12.456 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-11-27 13:34:12.463 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296851818 started.
+2018-11-27 13:34:12.480 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Started SpringBootDemoApplicationTests in 6.443 seconds (JVM running for 7.315)
+2018-11-27 13:34:12.788 [pool-3-thread-13] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2018-11-27 13:34:12.789 [pool-3-thread-13] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2018-11-27 13:34:15.734 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - MathTest：com.felix.springbootdemo.test.MathTest@46b2dcc5
+2018-11-27 13:34:15.832 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296851818 paused.
+2018-11-27 13:34:15.859 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-27 13:34:15.859 [Thread-6] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-27 13:34:15.859 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296851818 shutting down.
+2018-11-27 13:34:15.859 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296851818 paused.
+2018-11-27 13:34:15.869 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296851818 shutdown complete.
+2018-11-27 13:34:15.870 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:34:17.039 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-11-27 13:34:17.077 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-11-27 13:34:59.340 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-27 13:34:59.346 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-27 13:34:59.347 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-27 13:34:59.468 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-27 13:34:59.560 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-27 13:34:59.573 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35aea049, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7205765b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47987356, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@22ef9844, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6283d8b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b6ddd1d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3f6b0be5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@611889f4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1da2cb77, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48f278eb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f217633, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@a530d0a]
+2018-11-27 13:34:59.907 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 11862 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-27 13:34:59.907 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-27 13:35:00.545 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:35:00.545 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-27 13:35:00.545 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-27 13:35:00.681 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-27 13:35:00.683 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-27 13:35:00.712 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2018-11-27 13:35:01.166 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$4360aa56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:35:01.258 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7cf4ec28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-27 13:35:03.298 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-27 13:35:03.634 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:35:05.121 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-27 13:35:05.194 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-27 13:35:05.275 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-27 13:35:05.461 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2018-11-27 13:35:05.484 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-27 13:35:05.484 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-27 13:35:05.488 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-27 13:35:05.490 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-27 13:35:05.491 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543296905460'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-27 13:35:05.491 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-27 13:35:05.491 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-27 13:35:05.491 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@1e32037d
+2018-11-27 13:35:05.553 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-27 13:35:05.637 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-27 13:35:05.653 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-27 13:35:05.683 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-27 13:35:05.860 [main] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-27 13:35:05.865 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-27 13:35:05.866 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1543296851818"'s failed in-progress jobs.
+2018-11-27 13:35:05.869 [main] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-11-27 13:35:05.901 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296905460 started.
+2018-11-27 13:35:05.906 [QuartzScheduler_clusteredScheduler-felix1543296905460_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-27 13:35:05.919 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Started SpringBootDemoApplicationTests in 6.316 seconds (JVM running for 7.194)
+2018-11-27 13:35:06.209 [pool-3-thread-15] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2018-11-27 13:35:06.210 [pool-3-thread-15] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2018-11-27 13:35:07.120 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - [字符缓存结果] - [v1]
+2018-11-27 13:35:07.375 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - [对象缓存结果] - [User(name=json, age=1, userSex=MAN)]
+2018-11-27 13:35:07.381 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - MathTest：com.felix.springbootdemo.test.MathTest@32ea16b7
+2018-11-27 13:35:07.416 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296905460 paused.
+2018-11-27 13:35:07.427 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-27 13:35:07.428 [Thread-6] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-27 13:35:07.428 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296905460 shutting down.
+2018-11-27 13:35:07.428 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296905460 paused.
+2018-11-27 13:35:07.438 [Thread-6] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543296905460 shutdown complete.
+2018-11-27 13:35:07.440 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-27 13:35:08.605 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-11-27 13:35:08.636 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-11-27 13:56:39.901 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@73aff8f1
+2018-11-27 14:01:38.081 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 1]
+2018-11-27 14:03:26.809 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 1]
+2018-11-27 14:04:04.042 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 1],返回值为：1
+2018-11-27 14:05:49.318 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@2424686b
+2018-11-27 14:09:38.558 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 1]
+2018-11-27 14:11:29.133 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 1]
+2018-11-27 14:12:47.205 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 1],返回值为：1
+2018-11-27 14:14:28.578 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@2424686b
+2018-11-27 14:20:07.805 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@2424686b
+2018-11-27 14:23:05.752 [main] INFO  com.felix.springbootdemo.config.Test - [FAILED toString()]
+2018-11-27 14:58:59.733 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 1]
+2018-11-27 14:58:59.762 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 1]
+2018-11-27 14:58:59.762 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 1],返回值为：1
+2018-11-27 15:14:55.863 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@2424686b
+2018-11-27 15:15:11.442 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 1]
+2018-11-27 15:15:11.455 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 1]
+2018-11-27 15:15:11.455 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 1],返回值为：1
+2018-11-27 17:29:59.394 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@65f00478
+2018-11-27 17:40:19.897 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 1]
+2018-11-27 17:40:19.925 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 1]
+2018-11-27 17:40:19.925 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 1],返回值为：1

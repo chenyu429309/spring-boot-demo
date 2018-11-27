@@ -1,0 +1,577 @@
+2018-10-31 22:50:24.301 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 32164 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-10-31 22:50:24.326 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-10-31 22:50:24.371 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-10-31 22:50:24.371 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-10-31 22:50:25.096 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-10-31 22:50:25.096 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-10-31 22:50:25.096 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-10-31 22:50:25.221 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-31 22:50:25.222 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-10-31 22:50:25.245 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2018-10-31 22:50:25.537 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$6c593abe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-31 22:50:25.592 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a5ed7c90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-31 22:50:26.107 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-10-31 22:50:26.116 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-10-31 22:50:26.121 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-10-31 22:50:26.121 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-31 22:50:26.124 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-10-31 22:50:26.173 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-10-31 22:50:26.173 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1802 ms
+2018-10-31 22:50:26.204 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-10-31 22:50:26.207 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-31 22:50:26.207 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-31 22:50:26.207 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-10-31 22:50:26.207 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-31 22:50:27.137 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-10-31 22:50:27.187 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-10-31 22:50:27.386 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-10-31 22:50:28.171 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-10-31 22:50:28.395 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-10-31 22:50:29.029 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-10-31 22:50:29.036 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2018-10-31 22:50:29.065 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-31 22:50:29.066 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-10-31 22:50:29.080 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-10-31 22:50:29.088 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-10-31 22:50:29.091 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1540997429034'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-10-31 22:50:29.091 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-10-31 22:50:29.091 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-10-31 22:50:29.092 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@3da23cee
+2018-10-31 22:50:29.548 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-10-31 22:50:30.876 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-10-31 22:50:30.944 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-10-31 22:50:31.150 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-10-31 22:50:32.926 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-10-31 22:50:32.959 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-10-31 22:50:32.959 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1540908934140"'s failed in-progress jobs.
+2018-10-31 22:50:32.968 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-10-31 22:50:32.971 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997429034 started.
+2018-10-31 22:50:32.983 [QuartzScheduler_clusteredScheduler-felix1540997429034_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-10-31 22:50:33.092 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2018-10-31 22:50:33.098 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-10-31 22:50:33.156 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2018-10-31 22:50:33.169 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Started SpringBootDemoApplication in 9.27 seconds (JVM running for 10.606)
+2018-10-31 22:50:50.862 [http-nio-8888-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-31 22:50:50.863 [http-nio-8888-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-10-31 22:50:50.989 [http-nio-8888-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 126 ms
+2018-10-31 22:51:01.909 [http-nio-8888-exec-10] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的名字：update
+2018-10-31 22:51:01.909 [http-nio-8888-exec-10] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的Modifiers:1
+2018-10-31 22:51:01.910 [http-nio-8888-exec-10] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringType:class com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:51:01.910 [http-nio-8888-exec-10] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringTypeName:com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:51:01.911 [http-nio-8888-exec-10] INFO  com.felix.springbootdemo.aspects.logAspect - 请求URL : http://localhost:8888/java/users/update
+2018-10-31 22:51:01.912 [http-nio-8888-exec-10] INFO  com.felix.springbootdemo.aspects.logAspect - HTTP_METHOD : POST 
+2018-10-31 22:51:01.912 [http-nio-8888-exec-10] INFO  com.felix.springbootdemo.aspects.logAspect - IP : 0:0:0:0:0:0:0:1
+2018-10-31 22:51:01.912 [http-nio-8888-exec-10] INFO  com.felix.springbootdemo.aspects.logAspect - CLASS_METHOD : com.felix.springbootdemo.controller.UsersController.update
+2018-10-31 22:51:02.364 [http-nio-8888-exec-10] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - ==>  Preparing: INSERT INTO public.users (name, age, user_sex, version) VALUES (?, ?, ?, ?) 
+2018-10-31 22:51:02.613 [http-nio-8888-exec-10] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - ==> Parameters: test(String), 1(Integer), MAN(String), 1(Integer)
+2018-10-31 22:51:02.617 [http-nio-8888-exec-10] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - <==    Updates: 1
+2018-10-31 22:51:54.159 [http-nio-8888-exec-5] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的名字：update
+2018-10-31 22:51:54.159 [http-nio-8888-exec-5] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的Modifiers:1
+2018-10-31 22:51:54.160 [http-nio-8888-exec-5] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringType:class com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:51:54.160 [http-nio-8888-exec-5] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringTypeName:com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:51:54.161 [http-nio-8888-exec-5] INFO  com.felix.springbootdemo.aspects.logAspect - 请求URL : http://localhost:8888/java/users/update
+2018-10-31 22:51:54.161 [http-nio-8888-exec-5] INFO  com.felix.springbootdemo.aspects.logAspect - HTTP_METHOD : POST 
+2018-10-31 22:51:54.162 [http-nio-8888-exec-5] INFO  com.felix.springbootdemo.aspects.logAspect - IP : 0:0:0:0:0:0:0:1
+2018-10-31 22:51:54.162 [http-nio-8888-exec-5] INFO  com.felix.springbootdemo.aspects.logAspect - CLASS_METHOD : com.felix.springbootdemo.controller.UsersController.update
+2018-10-31 22:51:54.176 [http-nio-8888-exec-5] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - ==>  Preparing: INSERT INTO public.users (name, age, user_sex, version) VALUES (?, ?, ?, ?) 
+2018-10-31 22:51:54.246 [http-nio-8888-exec-5] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - ==> Parameters: test(String), 1(Integer), MAN(String), 1(Integer)
+2018-10-31 22:51:54.247 [http-nio-8888-exec-5] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - <==    Updates: 1
+2018-10-31 22:52:01.992 [http-nio-8888-exec-3] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的名字：update
+2018-10-31 22:52:01.993 [http-nio-8888-exec-3] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的Modifiers:1
+2018-10-31 22:52:01.994 [http-nio-8888-exec-3] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringType:class com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:52:01.995 [http-nio-8888-exec-3] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringTypeName:com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:52:01.996 [http-nio-8888-exec-3] INFO  com.felix.springbootdemo.aspects.logAspect - 请求URL : http://localhost:8888/java/users/update
+2018-10-31 22:52:01.997 [http-nio-8888-exec-3] INFO  com.felix.springbootdemo.aspects.logAspect - HTTP_METHOD : POST 
+2018-10-31 22:52:01.998 [http-nio-8888-exec-3] INFO  com.felix.springbootdemo.aspects.logAspect - IP : 0:0:0:0:0:0:0:1
+2018-10-31 22:52:01.999 [http-nio-8888-exec-3] INFO  com.felix.springbootdemo.aspects.logAspect - CLASS_METHOD : com.felix.springbootdemo.controller.UsersController.update
+2018-10-31 22:52:02.012 [http-nio-8888-exec-3] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - ==>  Preparing: INSERT INTO public.users (name, age, user_sex, version) VALUES (?, ?, ?, ?) 
+2018-10-31 22:52:02.083 [http-nio-8888-exec-3] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - ==> Parameters: test(String), 1(Integer), MAN(String), 1(Integer)
+2018-10-31 22:52:02.084 [http-nio-8888-exec-3] DEBUG com.felix.springbootdemo.mapper.UsersMapper.insert - <==    Updates: 1
+2018-10-31 22:52:27.953 [http-nio-8888-exec-6] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的名字：updateByLuckLock
+2018-10-31 22:52:27.954 [http-nio-8888-exec-6] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的Modifiers:1
+2018-10-31 22:52:27.954 [http-nio-8888-exec-6] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringType:class com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:52:27.955 [http-nio-8888-exec-6] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringTypeName:com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:52:27.955 [http-nio-8888-exec-6] INFO  com.felix.springbootdemo.aspects.logAspect - 请求URL : http://localhost:8888/java/users/update
+2018-10-31 22:52:27.956 [http-nio-8888-exec-6] INFO  com.felix.springbootdemo.aspects.logAspect - HTTP_METHOD : PUT 
+2018-10-31 22:52:27.956 [http-nio-8888-exec-6] INFO  com.felix.springbootdemo.aspects.logAspect - IP : 0:0:0:0:0:0:0:1
+2018-10-31 22:52:27.957 [http-nio-8888-exec-6] INFO  com.felix.springbootdemo.aspects.logAspect - CLASS_METHOD : com.felix.springbootdemo.controller.UsersController.updateByLuckLock
+2018-10-31 22:52:33.748 [http-nio-8888-exec-6] ERROR c.f.springbootdemo.handlers.GlobalExceptionHandler - {}
+java.lang.NullPointerException: null
+	at com.felix.springbootdemo.entity.Users.init(Users.java:63)
+	at com.felix.springbootdemo.controller.UsersController.updateByLuckLock(UsersController.java:84)
+	at com.felix.springbootdemo.controller.UsersController$$FastClassBySpringCGLIB$$fa93217f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.felix.springbootdemo.controller.UsersController$$EnhancerBySpringCGLIB$$791d9e66.updateByLuckLock(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:912)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-10-31 22:52:33.762 [http-nio-8888-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2018-10-31 22:53:00.687 [Thread-30] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997429034 paused.
+2018-10-31 22:53:00.692 [Thread-30] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-10-31 22:53:00.693 [Thread-30] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-10-31 22:53:00.693 [Thread-30] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997429034 shutting down.
+2018-10-31 22:53:00.693 [Thread-30] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997429034 paused.
+2018-10-31 22:53:00.694 [Thread-30] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997429034 shutdown complete.
+2018-10-31 22:53:00.696 [Thread-30] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-10-31 22:53:00.711 [Thread-30] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-10-31 22:53:00.715 [Thread-30] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-10-31 22:53:03.597 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 1053 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-10-31 22:53:03.600 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-10-31 22:53:03.644 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-10-31 22:53:03.644 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-10-31 22:53:04.432 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-10-31 22:53:04.432 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-10-31 22:53:04.437 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-10-31 22:53:04.547 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-31 22:53:04.548 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-10-31 22:53:04.571 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2018-10-31 22:53:04.857 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$f1602fef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-31 22:53:04.906 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2af471c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-31 22:53:05.386 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-10-31 22:53:05.395 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-10-31 22:53:05.399 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-10-31 22:53:05.399 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-31 22:53:05.401 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-10-31 22:53:05.450 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-10-31 22:53:05.450 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1806 ms
+2018-10-31 22:53:05.480 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-10-31 22:53:05.483 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-31 22:53:05.483 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-31 22:53:05.483 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-10-31 22:53:05.483 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-31 22:53:06.364 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-10-31 22:53:06.424 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-10-31 22:53:06.640 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-10-31 22:53:07.312 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-10-31 22:53:07.492 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-10-31 22:53:08.128 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-10-31 22:53:08.136 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2018-10-31 22:53:08.166 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-31 22:53:08.166 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-10-31 22:53:08.182 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-10-31 22:53:08.189 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-10-31 22:53:08.191 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1540997588134'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-10-31 22:53:08.191 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-10-31 22:53:08.191 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-10-31 22:53:08.192 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@30c20bb4
+2018-10-31 22:53:08.610 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-10-31 22:53:10.092 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-10-31 22:53:10.166 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-10-31 22:53:10.413 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-10-31 22:53:12.452 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-10-31 22:53:12.464 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-10-31 22:53:12.464 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1540997429034"'s failed in-progress jobs.
+2018-10-31 22:53:12.472 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-10-31 22:53:12.476 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997588134 started.
+2018-10-31 22:53:12.603 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2018-10-31 22:53:12.610 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-10-31 22:53:12.667 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2018-10-31 22:53:12.681 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Started SpringBootDemoApplication in 9.432 seconds (JVM running for 10.115)
+2018-10-31 22:53:15.078 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-31 22:53:15.079 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-10-31 22:53:15.191 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 112 ms
+2018-10-31 22:53:15.283 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的名字：updateByLuckLock
+2018-10-31 22:53:15.284 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的Modifiers:1
+2018-10-31 22:53:15.284 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringType:class com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:53:15.284 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringTypeName:com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:53:15.288 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 请求URL : http://localhost:8888/java/users/update
+2018-10-31 22:53:15.288 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - HTTP_METHOD : PUT 
+2018-10-31 22:53:15.288 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - IP : 0:0:0:0:0:0:0:1
+2018-10-31 22:53:15.289 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - CLASS_METHOD : com.felix.springbootdemo.controller.UsersController.updateByLuckLock
+2018-10-31 22:53:55.098 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s499ms447µs423ns).
+2018-10-31 22:53:55.105 [http-nio-8888-exec-1] ERROR c.f.springbootdemo.handlers.GlobalExceptionHandler - {}
+java.lang.NullPointerException: null
+	at com.felix.springbootdemo.entity.Users.init(Users.java:65)
+	at com.felix.springbootdemo.controller.UsersController.updateByLuckLock(UsersController.java:84)
+	at com.felix.springbootdemo.controller.UsersController$$FastClassBySpringCGLIB$$fa93217f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.felix.springbootdemo.controller.UsersController$$EnhancerBySpringCGLIB$$f4388207.updateByLuckLock(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:912)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-10-31 22:53:55.124 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997588134 paused.
+2018-10-31 22:53:55.129 [Thread-31] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-10-31 22:53:55.129 [Thread-31] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-10-31 22:53:55.129 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997588134 shutting down.
+2018-10-31 22:53:55.129 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997588134 paused.
+2018-10-31 22:53:55.130 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997588134 shutdown complete.
+2018-10-31 22:53:55.132 [Thread-31] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-10-31 22:53:55.136 [http-nio-8888-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2018-10-31 22:53:55.145 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-10-31 22:53:55.149 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-10-31 22:53:58.172 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 1779 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-10-31 22:53:58.175 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-10-31 22:53:58.277 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-10-31 22:53:58.278 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-10-31 22:53:58.982 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-10-31 22:53:58.982 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-10-31 22:53:58.982 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-10-31 22:53:59.096 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-31 22:53:59.098 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-10-31 22:53:59.120 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2018-10-31 22:53:59.410 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$3dbec52d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-31 22:53:59.467 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$775306ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-31 22:53:59.957 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-10-31 22:53:59.967 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-10-31 22:53:59.972 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-10-31 22:53:59.972 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-31 22:53:59.975 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-10-31 22:54:00.027 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-10-31 22:54:00.028 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1750 ms
+2018-10-31 22:54:00.060 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-10-31 22:54:00.063 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-31 22:54:00.063 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-31 22:54:00.063 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-10-31 22:54:00.063 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-31 22:54:01.025 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-10-31 22:54:01.092 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-10-31 22:54:01.330 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-10-31 22:54:02.059 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-10-31 22:54:02.294 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-10-31 22:54:02.986 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-10-31 22:54:02.995 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2018-10-31 22:54:03.028 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-31 22:54:03.029 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-10-31 22:54:03.042 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-10-31 22:54:03.049 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-10-31 22:54:03.051 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1540997642993'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-10-31 22:54:03.051 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-10-31 22:54:03.051 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-10-31 22:54:03.052 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@34d113ce
+2018-10-31 22:54:03.497 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-10-31 22:54:04.832 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-10-31 22:54:04.894 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-10-31 22:54:05.104 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-10-31 22:54:06.983 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-10-31 22:54:07.027 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997642993 started.
+2018-10-31 22:54:07.037 [QuartzScheduler_clusteredScheduler-felix1540997642993_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-10-31 22:54:07.168 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2018-10-31 22:54:07.175 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-10-31 22:54:07.244 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2018-10-31 22:54:07.258 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Started SpringBootDemoApplication in 9.463 seconds (JVM running for 10.171)
+2018-10-31 22:54:10.622 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-31 22:54:10.622 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-10-31 22:54:10.740 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 117 ms
+2018-10-31 22:54:10.840 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的名字：updateByLuckLock
+2018-10-31 22:54:10.841 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的Modifiers:1
+2018-10-31 22:54:10.841 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringType:class com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:54:10.841 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringTypeName:com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:54:10.844 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 请求URL : http://localhost:8888/java/users/update
+2018-10-31 22:54:10.844 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - HTTP_METHOD : PUT 
+2018-10-31 22:54:10.844 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - IP : 0:0:0:0:0:0:0:1
+2018-10-31 22:54:10.844 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - CLASS_METHOD : com.felix.springbootdemo.controller.UsersController.updateByLuckLock
+2018-10-31 22:55:38.723 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s324ms206µs666ns).
+2018-10-31 22:55:38.739 [http-nio-8888-exec-1] ERROR c.f.springbootdemo.handlers.GlobalExceptionHandler - {}
+java.lang.NullPointerException: null
+	at com.felix.springbootdemo.entity.Users.init(Users.java:67)
+	at com.felix.springbootdemo.controller.UsersController.updateByLuckLock(UsersController.java:84)
+	at com.felix.springbootdemo.controller.UsersController$$FastClassBySpringCGLIB$$fa93217f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.felix.springbootdemo.controller.UsersController$$EnhancerBySpringCGLIB$$2d10367b.updateByLuckLock(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:912)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018-10-31 22:55:38.747 [QuartzScheduler_clusteredScheduler-felix1540997642993_ClusterManager] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-10-31 22:55:38.748 [QuartzScheduler_clusteredScheduler-felix1540997642993_ClusterManager] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1540997588134"'s failed in-progress jobs.
+2018-10-31 22:55:38.768 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997642993 paused.
+2018-10-31 22:55:38.772 [Thread-31] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-10-31 22:55:38.773 [Thread-31] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-10-31 22:55:38.773 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997642993 shutting down.
+2018-10-31 22:55:38.773 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997642993 paused.
+2018-10-31 22:55:38.774 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997642993 shutdown complete.
+2018-10-31 22:55:38.775 [Thread-31] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-10-31 22:55:38.783 [http-nio-8888-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2018-10-31 22:55:38.787 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-10-31 22:55:38.791 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-10-31 22:55:41.814 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 2863 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-10-31 22:55:41.817 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-10-31 22:55:41.901 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-10-31 22:55:41.901 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-10-31 22:55:42.669 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-10-31 22:55:42.669 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-10-31 22:55:42.669 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-10-31 22:55:42.794 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-31 22:55:42.795 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-10-31 22:55:42.820 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2018-10-31 22:55:43.116 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$bc48c2e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-31 22:55:43.168 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f5dd04ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-31 22:55:43.650 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-10-31 22:55:43.658 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-10-31 22:55:43.662 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-10-31 22:55:43.662 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-31 22:55:43.665 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-10-31 22:55:43.714 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-10-31 22:55:43.715 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1814 ms
+2018-10-31 22:55:43.745 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-10-31 22:55:43.748 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-31 22:55:43.749 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-31 22:55:43.749 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-10-31 22:55:43.749 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-31 22:55:44.612 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-10-31 22:55:44.666 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-10-31 22:55:44.885 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-10-31 22:55:45.620 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-10-31 22:55:45.810 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-10-31 22:55:46.433 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-10-31 22:55:46.441 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2018-10-31 22:55:46.468 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-31 22:55:46.468 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-10-31 22:55:46.479 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-10-31 22:55:46.485 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-10-31 22:55:46.487 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1540997746439'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-10-31 22:55:46.488 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-10-31 22:55:46.488 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-10-31 22:55:46.488 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@2f4ce7c
+2018-10-31 22:55:46.891 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-10-31 22:55:48.357 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-10-31 22:55:48.427 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-10-31 22:55:48.650 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-10-31 22:55:50.584 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-10-31 22:55:50.601 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997746439 started.
+2018-10-31 22:55:50.616 [QuartzScheduler_clusteredScheduler-felix1540997746439_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-10-31 22:55:50.730 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2018-10-31 22:55:50.736 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-10-31 22:55:50.788 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2018-10-31 22:55:50.805 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Started SpringBootDemoApplication in 9.405 seconds (JVM running for 10.094)
+2018-10-31 22:56:00.613 [QuartzScheduler_clusteredScheduler-felix1540997746439_ClusterManager] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-10-31 22:56:00.615 [QuartzScheduler_clusteredScheduler-felix1540997746439_ClusterManager] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1540997642993"'s failed in-progress jobs.
+2018-10-31 22:56:05.253 [http-nio-8888-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-31 22:56:05.253 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-10-31 22:56:05.374 [http-nio-8888-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 121 ms
+2018-10-31 22:56:05.497 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的名字：updateByLuckLock
+2018-10-31 22:56:05.498 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的Modifiers:1
+2018-10-31 22:56:05.498 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringType:class com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:56:05.498 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringTypeName:com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:56:05.501 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - 请求URL : http://localhost:8888/java/users/update
+2018-10-31 22:56:05.501 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - HTTP_METHOD : PUT 
+2018-10-31 22:56:05.501 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - IP : 0:0:0:0:0:0:0:1
+2018-10-31 22:56:05.502 [http-nio-8888-exec-1] INFO  com.felix.springbootdemo.aspects.logAspect - CLASS_METHOD : com.felix.springbootdemo.controller.UsersController.updateByLuckLock
+2018-10-31 22:56:11.459 [http-nio-8888-exec-1] ERROR com.felix.springbootdemo.entity.Users - com.felix.springbootdemo.service.impl.UsersServiceImpl@365db98e
+2018-10-31 22:56:11.840 [http-nio-8888-exec-1] DEBUG c.f.springbootdemo.mapper.UsersMapper.updateById - ==>  Preparing: UPDATE public.users SET name = ?, age = ?, user_sex = ?, created_at = ?, updated_at = ?, version = ? WHERE id = ? AND version = ? 
+2018-10-31 22:56:12.074 [http-nio-8888-exec-1] DEBUG c.f.springbootdemo.mapper.UsersMapper.updateById - ==> Parameters: test(String), 1(Integer), WOMEN(String), 2018-10-31 22:56:11.639(Timestamp), 2018-10-31 22:56:11.66(Timestamp), 2(Integer), 1(Integer), 1(Integer)
+2018-10-31 22:56:12.075 [http-nio-8888-exec-1] DEBUG c.f.springbootdemo.mapper.UsersMapper.updateById - <==    Updates: 0
+2018-10-31 22:56:38.210 [http-nio-8888-exec-2] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的名字：updateByLuckLock
+2018-10-31 22:56:38.211 [http-nio-8888-exec-2] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的Modifiers:1
+2018-10-31 22:56:38.212 [http-nio-8888-exec-2] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringType:class com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:56:38.213 [http-nio-8888-exec-2] INFO  com.felix.springbootdemo.aspects.logAspect - 当前方法的DeclaringTypeName:com.felix.springbootdemo.controller.UsersController
+2018-10-31 22:56:38.213 [http-nio-8888-exec-2] INFO  com.felix.springbootdemo.aspects.logAspect - 请求URL : http://localhost:8888/java/users/update
+2018-10-31 22:56:38.214 [http-nio-8888-exec-2] INFO  com.felix.springbootdemo.aspects.logAspect - HTTP_METHOD : PUT 
+2018-10-31 22:56:38.214 [http-nio-8888-exec-2] INFO  com.felix.springbootdemo.aspects.logAspect - IP : 0:0:0:0:0:0:0:1
+2018-10-31 22:56:38.215 [http-nio-8888-exec-2] INFO  com.felix.springbootdemo.aspects.logAspect - CLASS_METHOD : com.felix.springbootdemo.controller.UsersController.updateByLuckLock
+2018-10-31 23:26:51.398 [http-nio-8888-exec-2] ERROR com.felix.springbootdemo.entity.Users - com.felix.springbootdemo.service.impl.UsersServiceImpl@365db98e
+2018-10-31 23:26:51.398 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m1s436ms816µs94ns).
+2018-10-31 23:26:51.442 [http-nio-8888-exec-2] DEBUG c.f.springbootdemo.mapper.UsersMapper.updateById - ==>  Preparing: UPDATE public.users SET name = ?, age = ?, user_sex = ?, created_at = ?, updated_at = ?, version = ? WHERE id = ? AND version = ? 
+2018-10-31 23:26:51.475 [QuartzScheduler_clusteredScheduler-felix1540997746439_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-10-31 23:26:51.510 [http-nio-8888-exec-2] DEBUG c.f.springbootdemo.mapper.UsersMapper.updateById - ==> Parameters: test(String), 1(Integer), WOMEN(String), 2018-10-31 23:26:51.424(Timestamp), 2018-10-31 23:26:51.424(Timestamp), 2(Integer), 1(Integer), 1(Integer)
+2018-10-31 23:26:51.512 [http-nio-8888-exec-2] DEBUG c.f.springbootdemo.mapper.UsersMapper.updateById - <==    Updates: 0
+2018-10-31 23:27:02.525 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997746439 paused.
+2018-10-31 23:27:02.529 [Thread-31] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-10-31 23:27:02.530 [Thread-31] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-10-31 23:27:02.530 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997746439 shutting down.
+2018-10-31 23:27:02.530 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997746439 paused.
+2018-10-31 23:27:02.531 [Thread-31] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1540997746439 shutdown complete.
+2018-10-31 23:27:02.533 [Thread-31] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-10-31 23:27:02.549 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-10-31 23:27:02.554 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

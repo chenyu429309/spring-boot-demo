@@ -1,0 +1,1135 @@
+2018-11-26 10:40:42.827 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-26 10:40:42.834 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-26 10:40:42.834 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-26 10:40:42.965 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-26 10:40:43.116 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-26 10:40:43.140 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@708400f6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5829e4f4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4218500f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4bff64c2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b2c4efb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c35172e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c2db68f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3cc41abc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4566d049, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@61ce23ac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3668d4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1c3b9394]
+2018-11-26 10:40:43.649 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 30216 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 10:40:43.649 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-26 10:40:44.484 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=aopConfig; factoryMethodName=mathAspect; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]] for bean 'mathAspect': There is already [Generic bean: class [com.felix.springbootdemo.aspects.MathAspect]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/felix/work/spring-boot-demo/target/classes/com/felix/springbootdemo/aspects/MathAspect.class]] bound.
+2018-11-26 10:40:44.493 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-26 10:40:44.495 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'mathAspect', defined in class path resource [com/felix/springbootdemo/test/AopConfig.class], could not be registered. A bean with that name has already been defined in file [/home/felix/work/spring-boot-demo/target/classes/com/felix/springbootdemo/aspects/MathAspect.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2018-11-26 10:40:44.498 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@708400f6] to prepare test instance [com.felix.springbootdemo.SpringBootDemoApplicationTests@5fef2aac]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=aopConfig; factoryMethodName=mathAspect; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]] for bean 'mathAspect': There is already [Generic bean: class [com.felix.springbootdemo.aspects.MathAspect]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/felix/work/spring-boot-demo/target/classes/com/felix/springbootdemo/aspects/MathAspect.class]] bound.
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:896)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:274)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:693)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:530)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:421)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:340)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+2018-11-26 10:41:28.565 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-26 10:41:28.572 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-26 10:41:28.574 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-26 10:41:28.731 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-26 10:41:28.871 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-26 10:41:28.895 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@708400f6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5829e4f4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4218500f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4bff64c2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b2c4efb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c35172e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c2db68f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3cc41abc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4566d049, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@61ce23ac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3668d4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1c3b9394]
+2018-11-26 10:41:29.314 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 30644 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 10:41:29.315 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-26 10:41:30.174 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:41:30.174 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:41:30.174 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 10:41:30.332 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 10:41:30.334 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 10:41:30.373 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2018-11-26 10:41:30.941 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$bd1333a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:41:31.022 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f6a7757b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:45:41.882 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2018-11-26 10:45:43.084 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-26 10:45:43.097 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  mathAspect defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]
+└─────┘
+
+
+2018-11-26 10:45:45.303 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@708400f6] to prepare test instance [com.felix.springbootdemo.SpringBootDemoApplicationTests@18ac25e6]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1126)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:848)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:865)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:421)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:340)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:620)
+	... 42 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:215)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectInstanceFactory.getAspectInstance(BeanFactoryAspectInstanceFactory.java:90)
+	at org.springframework.aop.aspectj.annotation.LazySingletonAspectInstanceFactoryDecorator.getAspectInstance(LazySingletonAspectInstanceFactoryDecorator.java:56)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:66)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.felix.springbootdemo.test.AopConfig$$EnhancerBySpringCGLIB$$81d32c03.mathAspect(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 43 common frames omitted
+2018-11-26 10:47:07.730 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-26 10:47:07.737 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-26 10:47:07.739 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-26 10:47:07.909 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-26 10:47:08.051 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-26 10:47:08.066 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@708400f6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5829e4f4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4218500f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4bff64c2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b2c4efb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c35172e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c2db68f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3cc41abc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4566d049, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@61ce23ac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3668d4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1c3b9394]
+2018-11-26 10:47:08.436 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 2039 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 10:47:08.437 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-26 10:47:09.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:47:09.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:47:09.251 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 10:47:09.394 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 10:47:09.397 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 10:47:09.429 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2018-11-26 10:47:09.976 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$b78ba5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:47:10.051 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$450cfc31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:48:29.333 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2018-11-26 10:48:29.358 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-26 10:48:29.361 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  mathAspect defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]
+└─────┘
+
+
+2018-11-26 10:48:29.364 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@708400f6] to prepare test instance [com.felix.springbootdemo.SpringBootDemoApplicationTests@72d16d6]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1126)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:848)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:865)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:421)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:340)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:620)
+	... 42 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:215)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectInstanceFactory.getAspectInstance(BeanFactoryAspectInstanceFactory.java:90)
+	at org.springframework.aop.aspectj.annotation.LazySingletonAspectInstanceFactoryDecorator.getAspectInstance(LazySingletonAspectInstanceFactoryDecorator.java:56)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:66)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.felix.springbootdemo.test.AopConfig$$EnhancerBySpringCGLIB$$bf933c64.mathAspect(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 43 common frames omitted
+2018-11-26 10:48:31.526 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-26 10:48:31.533 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-26 10:48:31.534 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-26 10:48:31.675 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-26 10:48:31.827 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-26 10:48:31.843 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@708400f6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5829e4f4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4218500f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4bff64c2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b2c4efb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c35172e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c2db68f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3cc41abc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4566d049, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@61ce23ac, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3668d4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1c3b9394]
+2018-11-26 10:48:32.219 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 3148 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 10:48:32.220 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-26 10:48:33.101 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:48:33.101 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:48:33.101 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 10:48:33.285 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 10:48:33.288 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 10:48:33.329 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2018-11-26 10:48:34.058 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$bd5b31db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:48:34.150 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f6ef73ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:52:39.139 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2018-11-26 10:52:44.049 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-26 10:52:44.057 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-26 10:52:44.058 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-26 10:52:44.194 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-26 10:52:44.317 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-26 10:52:44.333 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35390ee3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5e01a982, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5ddea849, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5ee2b6f9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23d1e5d0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@704f1591, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@58fb7731, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13e547a9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3fb6cf60, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@37ddb69a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@349c1daf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@dfddc9a]
+2018-11-26 10:52:44.700 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 6316 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 10:52:44.701 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-26 10:52:45.494 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:52:45.494 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:52:45.494 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 10:52:45.646 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 10:52:45.648 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 10:52:45.681 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2018-11-26 10:52:46.212 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$81500b33] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:52:46.283 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bae44d05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:52:49.510 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2018-11-26 10:52:49.535 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-26 10:52:49.537 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  mathAspect defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]
+└─────┘
+
+
+2018-11-26 10:52:49.541 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@35390ee3] to prepare test instance [com.felix.springbootdemo.SpringBootDemoApplicationTests@20afd96f]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1126)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:848)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:865)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:421)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:340)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:620)
+	... 42 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:215)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectInstanceFactory.getAspectInstance(BeanFactoryAspectInstanceFactory.java:90)
+	at org.springframework.aop.aspectj.annotation.LazySingletonAspectInstanceFactoryDecorator.getAspectInstance(LazySingletonAspectInstanceFactoryDecorator.java:56)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:66)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.felix.springbootdemo.test.AopConfig$$EnhancerBySpringCGLIB$$3d3fc30.mathAspect(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 43 common frames omitted
+2018-11-26 10:55:39.494 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-26 10:55:39.501 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-26 10:55:39.502 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-26 10:55:39.616 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-26 10:55:39.721 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-26 10:55:39.736 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5e01a982, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5ddea849, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5ee2b6f9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@23d1e5d0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@704f1591, org.springframework.test.context.transaction.TransactionalTestExecutionListener@58fb7731, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13e547a9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3fb6cf60, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37ddb69a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@349c1daf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@dfddc9a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4b9df8a]
+2018-11-26 10:55:40.086 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 8728 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 10:55:40.086 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-26 10:55:40.816 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:55:40.816 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:55:40.816 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 10:55:40.961 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 10:55:40.963 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 10:55:40.998 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2018-11-26 10:55:41.530 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$7126ddc7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:55:41.599 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aabb1f99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:55:45.804 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2018-11-26 10:55:45.842 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-26 10:55:45.845 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  mathAspect defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]
+└─────┘
+
+
+2018-11-26 10:55:45.849 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5e01a982] to prepare test instance [com.felix.springbootdemo.SpringBootDemoApplicationTests@2d3111a1]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1126)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:848)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:865)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:421)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:340)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:620)
+	... 42 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:215)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectInstanceFactory.getAspectInstance(BeanFactoryAspectInstanceFactory.java:90)
+	at org.springframework.aop.aspectj.annotation.LazySingletonAspectInstanceFactoryDecorator.getAspectInstance(LazySingletonAspectInstanceFactoryDecorator.java:56)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:66)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.felix.springbootdemo.test.AopConfig$$EnhancerBySpringCGLIB$$77fa0edc.mathAspect(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 43 common frames omitted
+2018-11-26 10:55:54.822 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests], using SpringBootContextLoader
+2018-11-26 10:55:54.830 [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-26 10:55:54.831 [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.felix.springbootdemo.SpringBootDemoApplicationTests]: SpringBootDemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-26 10:55:55.005 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.felix.springbootdemo.SpringBootDemoApplication for test class com.felix.springbootdemo.SpringBootDemoApplicationTests
+2018-11-26 10:55:55.155 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-26 10:55:55.177 [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5e01a982, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5ddea849, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5ee2b6f9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@23d1e5d0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@704f1591, org.springframework.test.context.transaction.TransactionalTestExecutionListener@58fb7731, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13e547a9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3fb6cf60, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37ddb69a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@349c1daf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@dfddc9a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4b9df8a]
+2018-11-26 10:55:55.542 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - Starting SpringBootDemoApplicationTests on felix with PID 8969 (started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 10:55:55.542 [main] INFO  c.f.springbootdemo.SpringBootDemoApplicationTests - The following profiles are active: gs
+2018-11-26 10:55:56.295 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:55:56.296 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 10:55:56.296 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 10:55:56.438 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 10:55:56.440 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 10:55:56.472 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2018-11-26 10:55:57.064 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a554b494] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:55:57.137 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dee8f666] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 10:56:33.062 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2018-11-26 10:56:33.085 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-26 10:56:33.086 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  mathAspect defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]
+└─────┘
+
+
+2018-11-26 10:56:33.090 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5e01a982] to prepare test instance [com.felix.springbootdemo.SpringBootDemoApplicationTests@612290d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in class path resource [com/felix/springbootdemo/test/AopConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1126)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:848)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:865)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:421)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:340)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:620)
+	... 42 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:215)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.aop.aspectj.annotation.BeanFactoryAspectInstanceFactory.getAspectInstance(BeanFactoryAspectInstanceFactory.java:90)
+	at org.springframework.aop.aspectj.annotation.LazySingletonAspectInstanceFactoryDecorator.getAspectInstance(LazySingletonAspectInstanceFactoryDecorator.java:56)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:626)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:66)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.felix.springbootdemo.test.AopConfig$$EnhancerBySpringCGLIB$$da144e26.mathAspect(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 43 common frames omitted
+2018-11-26 10:59:02.616 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathAspect' defined in com.felix.springbootdemo.test.AopConfig: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.felix.springbootdemo.aspects.MathAspect]: Factory method 'mathAspect' threw exception; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'mathAspect': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2018-11-26 11:01:28.979 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 12708 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 11:01:28.981 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-11-26 11:01:29.055 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-11-26 11:01:29.055 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-11-26 11:01:29.690 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:01:29.691 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:01:29.691 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 11:01:29.834 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 11:01:29.836 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 11:01:29.861 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2018-11-26 11:01:30.261 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$522a4a67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:01:30.364 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8bbe8c39] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:01:31.071 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-11-26 11:01:31.082 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:01:31.086 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-26 11:01:31.086 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-26 11:01:31.090 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-11-26 11:01:31.145 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-26 11:01:31.146 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2091 ms
+2018-11-26 11:01:31.185 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-26 11:01:31.189 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-26 11:01:31.189 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-26 11:01:31.189 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-26 11:01:31.189 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-26 11:01:31.702 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathTest' defined in file [/home/felix/work/spring-boot-demo/target/classes/com/felix/springbootdemo/test/MathTest.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Lifecycle method annotation requires a no-arg method: public int com.felix.springbootdemo.test.MathTest.div(int,int)
+2018-11-26 11:01:31.705 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2018-11-26 11:01:31.729 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-26 11:01:31.735 [restartedMain] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathTest' defined in file [/home/felix/work/spring-boot-demo/target/classes/com/felix/springbootdemo/test/MathTest.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Lifecycle method annotation requires a no-arg method: public int com.felix.springbootdemo.test.MathTest.div(int,int)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:848)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:865)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:421)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1279)
+	at com.felix.springbootdemo.SpringBootDemoApplication.main(SpringBootDemoApplication.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Lifecycle method annotation requires a no-arg method: public int com.felix.springbootdemo.test.MathTest.div(int,int)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.<init>(InitDestroyAnnotationBeanPostProcessor.java:346)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.lambda$buildLifecycleMetadata$0(InitDestroyAnnotationBeanPostProcessor.java:209)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:543)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.buildLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:207)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:189)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(InitDestroyAnnotationBeanPostProcessor.java:128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:297)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1043)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:550)
+	... 20 common frames omitted
+2018-11-26 11:02:49.529 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 13732 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 11:02:49.532 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-11-26 11:02:49.583 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-11-26 11:02:49.583 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-11-26 11:02:50.256 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:02:50.256 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:02:50.256 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 11:02:50.386 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 11:02:50.388 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 11:02:50.414 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2018-11-26 11:02:50.733 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$5189c0c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:02:50.798 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8b1e0299] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:02:51.411 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-11-26 11:02:51.420 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:02:51.424 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-26 11:02:51.425 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-26 11:02:51.428 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-11-26 11:02:51.484 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-26 11:02:51.484 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1901 ms
+2018-11-26 11:02:51.525 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-26 11:02:51.528 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-26 11:02:51.528 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-26 11:02:51.528 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-26 11:02:51.529 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-26 11:02:52.029 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathTest' defined in file [/home/felix/work/spring-boot-demo/target/classes/com/felix/springbootdemo/test/MathTest.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Lifecycle method annotation requires a no-arg method: public int com.felix.springbootdemo.test.MathTest.div(int,int)
+2018-11-26 11:02:52.032 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2018-11-26 11:02:52.046 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-26 11:02:52.055 [restartedMain] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mathTest' defined in file [/home/felix/work/spring-boot-demo/target/classes/com/felix/springbootdemo/test/MathTest.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Lifecycle method annotation requires a no-arg method: public int com.felix.springbootdemo.test.MathTest.div(int,int)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:848)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:865)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:421)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1279)
+	at com.felix.springbootdemo.SpringBootDemoApplication.main(SpringBootDemoApplication.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Lifecycle method annotation requires a no-arg method: public int com.felix.springbootdemo.test.MathTest.div(int,int)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.<init>(InitDestroyAnnotationBeanPostProcessor.java:346)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.lambda$buildLifecycleMetadata$0(InitDestroyAnnotationBeanPostProcessor.java:209)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:543)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.buildLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:207)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:189)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(InitDestroyAnnotationBeanPostProcessor.java:128)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:297)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1043)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:550)
+	... 20 common frames omitted
+2018-11-26 11:04:08.222 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 14730 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 11:04:08.225 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-11-26 11:04:08.313 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-11-26 11:04:08.313 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-11-26 11:04:09.154 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:04:09.154 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:04:09.154 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 11:04:09.287 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 11:04:09.288 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 11:04:09.318 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2018-11-26 11:04:09.651 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$ba1f7448] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:04:09.718 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f3b3b61a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:04:10.360 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-11-26 11:04:10.371 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:04:10.376 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-26 11:04:10.377 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-26 11:04:10.380 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-11-26 11:04:10.441 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-26 11:04:10.441 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2128 ms
+2018-11-26 11:04:10.480 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-26 11:04:10.484 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-26 11:04:10.484 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-26 11:04:10.484 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-26 11:04:10.484 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-26 11:04:20.129 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-26 11:04:20.236 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-26 11:04:20.553 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-11-26 11:04:21.783 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-26 11:04:22.137 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-26 11:04:23.085 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-26 11:04:23.092 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2018-11-26 11:04:23.124 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-26 11:04:23.124 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-26 11:04:23.138 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-26 11:04:23.145 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-26 11:04:23.147 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543201463090'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-26 11:04:23.148 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-26 11:04:23.148 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-26 11:04:23.149 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@6a42cfff
+2018-11-26 11:04:23.915 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-26 11:04:26.067 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-26 11:04:26.153 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-26 11:04:26.416 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-26 11:04:28.573 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-26 11:04:28.588 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-26 11:04:28.588 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1541668976005"'s failed in-progress jobs.
+2018-11-26 11:04:28.593 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543201463090 started.
+2018-11-26 11:04:28.608 [QuartzScheduler_clusteredScheduler-felix1543201463090_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-26 11:04:28.736 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:04:28.743 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-26 11:04:28.811 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2018-11-26 11:04:28.828 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Started SpringBootDemoApplication in 21.054 seconds (JVM running for 21.781)
+2018-11-26 11:04:29.896 [Thread-38] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543201463090 paused.
+2018-11-26 11:04:29.907 [Thread-38] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-26 11:04:29.907 [Thread-38] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-26 11:04:29.908 [Thread-38] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543201463090 shutting down.
+2018-11-26 11:04:29.908 [Thread-38] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543201463090 paused.
+2018-11-26 11:04:29.908 [Thread-38] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543201463090 shutdown complete.
+2018-11-26 11:04:29.910 [Thread-38] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-26 11:04:29.923 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-11-26 11:04:29.927 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-11-26 11:04:32.169 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 15234 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 11:04:32.171 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-11-26 11:04:32.263 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-11-26 11:04:32.263 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-11-26 11:04:33.172 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:04:33.172 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:04:33.172 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 11:04:33.371 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 11:04:33.372 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 11:04:33.402 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2018-11-26 11:04:33.740 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$17f4fc7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:04:33.807 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$51893e4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:04:34.448 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-11-26 11:04:34.459 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:04:34.464 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-26 11:04:34.464 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-26 11:04:34.468 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-11-26 11:04:34.528 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-26 11:04:34.528 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2265 ms
+2018-11-26 11:04:34.567 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-26 11:04:34.572 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-26 11:04:34.572 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-26 11:04:34.572 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-26 11:04:34.572 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-26 11:21:00.304 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-26 11:21:00.406 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-26 11:21:00.739 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-11-26 11:21:02.042 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-26 11:21:02.315 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-26 11:21:03.274 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-26 11:21:03.280 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2018-11-26 11:21:03.307 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-26 11:21:03.308 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-26 11:21:03.322 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-26 11:21:03.330 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-26 11:21:03.332 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543202463278'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-26 11:21:03.332 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-26 11:21:03.332 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-26 11:21:03.332 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@60a36e39
+2018-11-26 11:21:04.122 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-26 11:21:07.965 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 26350 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 11:21:07.968 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-11-26 11:21:08.040 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-11-26 11:21:08.041 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-11-26 11:21:08.694 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:21:08.695 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:21:08.695 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 11:21:08.819 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 11:21:08.821 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 11:21:08.846 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2018-11-26 11:21:09.178 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$d1b2da0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:22:06.542 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b471be1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:22:07.208 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-11-26 11:22:07.219 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:22:07.224 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-26 11:22:07.224 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-26 11:22:07.228 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-11-26 11:22:07.293 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-26 11:22:07.293 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 59252 ms
+2018-11-26 11:22:07.331 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-26 11:22:07.334 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-26 11:22:07.335 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-26 11:22:07.335 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-26 11:22:07.335 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-26 11:28:08.156 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-26 11:28:08.268 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-26 11:28:08.631 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-11-26 11:28:09.864 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-26 11:28:10.099 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-26 11:28:11.117 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-26 11:28:11.124 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2018-11-26 11:28:11.157 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-26 11:28:11.158 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-26 11:28:11.177 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-26 11:28:11.187 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-26 11:28:11.191 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543202891122'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-26 11:28:11.191 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-26 11:28:11.191 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-26 11:28:11.192 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@6330aa94
+2018-11-26 11:28:12.086 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-26 11:28:14.705 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-26 11:28:14.778 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-26 11:28:15.020 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-26 11:28:17.284 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-26 11:28:17.296 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-26 11:28:17.296 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1543201463090"'s failed in-progress jobs.
+2018-11-26 11:28:17.305 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-11-26 11:28:17.314 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543202891122 started.
+2018-11-26 11:28:17.324 [QuartzScheduler_clusteredScheduler-felix1543202891122_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-26 11:28:17.478 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:28:17.487 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-26 11:28:17.569 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2018-11-26 11:28:17.584 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Started SpringBootDemoApplication in 430.035 seconds (JVM running for 430.757)
+2018-11-26 11:30:29.622 [Thread-70] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543202891122 paused.
+2018-11-26 11:30:29.626 [Thread-70] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-26 11:30:29.626 [Thread-70] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-26 11:30:29.626 [Thread-70] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543202891122 shutting down.
+2018-11-26 11:30:29.626 [Thread-70] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543202891122 paused.
+2018-11-26 11:30:29.627 [Thread-70] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543202891122 shutdown complete.
+2018-11-26 11:30:29.630 [Thread-70] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-26 11:30:29.641 [Thread-70] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-11-26 11:30:29.645 [Thread-70] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-11-26 11:30:32.762 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Starting SpringBootDemoApplication on felix with PID 32491 (/home/felix/work/spring-boot-demo/target/classes started by felix in /home/felix/work/spring-boot-demo)
+2018-11-26 11:30:32.765 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - The following profiles are active: gs
+2018-11-26 11:30:32.812 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-11-26 11:30:32.812 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-11-26 11:30:33.498 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.felix.springbootdemo.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:30:33.498 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'usersMapper' and 'com.felix.springbootdemo.mapper.UsersMapper' mapperInterface. Bean already defined with the same name!
+2018-11-26 11:30:33.498 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.felix.springbootdemo.mapper]' package. Please check your configuration.
+2018-11-26 11:30:33.625 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-26 11:30:33.627 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-26 11:30:33.652 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2018-11-26 11:30:33.966 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$a4f4a502] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:30:34.041 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$de88e6d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-26 11:30:34.662 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2018-11-26 11:30:34.671 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:30:34.675 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2018-11-26 11:30:34.675 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-26 11:30:34.679 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-11-26 11:30:34.733 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-11-26 11:30:34.734 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1922 ms
+2018-11-26 11:30:34.772 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-11-26 11:30:34.775 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-26 11:30:34.776 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-26 11:30:34.776 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-11-26 11:30:34.776 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-26 11:30:43.035 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-26 11:30:43.158 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-26 11:30:43.466 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-11-26 11:30:44.654 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-11-26 11:30:44.881 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-11-26 11:30:45.804 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2018-11-26 11:30:45.810 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2018-11-26 11:30:45.841 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-11-26 11:30:45.842 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+2018-11-26 11:30:45.856 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Using db table-based data access locking (synchronization).
+2018-11-26 11:30:45.864 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - JobStoreCMT initialized.
+2018-11-26 11:30:45.867 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'clusteredScheduler' with instanceId 'felix1543203045808'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2018-11-26 11:30:45.868 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2018-11-26 11:30:45.868 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.0
+2018-11-26 11:30:45.869 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@4a3207ed
+2018-11-26 11:30:46.652 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2018-11-26 11:30:49.020 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2018-11-26 11:30:49.095 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-11-26 11:30:49.349 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2018-11-26 11:30:51.473 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2018-11-26 11:30:51.485 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: detected 1 failed or restarted instances.
+2018-11-26 11:30:51.486 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: Scanning for instance "felix1543202891122"'s failed in-progress jobs.
+2018-11-26 11:30:51.497 [restartedMain] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - ClusterManager: ......Cleaned-up 1 other failed job(s).
+2018-11-26 11:30:51.505 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543203045808 started.
+2018-11-26 11:30:51.656 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2018-11-26 11:30:51.664 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2018-11-26 11:30:51.734 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2018-11-26 11:30:51.751 [restartedMain] INFO  com.felix.springbootdemo.SpringBootDemoApplication - Started SpringBootDemoApplication in 19.415 seconds (JVM running for 20.095)
+2018-11-26 11:32:51.511 [QuartzScheduler_clusteredScheduler-felix1543203045808_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-26 11:38:51.520 [QuartzScheduler_clusteredScheduler-felix1543203045808_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-26 11:44:51.521 [QuartzScheduler_clusteredScheduler-felix1543203045808_MisfireHandler] INFO  o.s.scheduling.quartz.LocalDataSourceJobStore - Handling 1 trigger(s) that missed their scheduled fire-time.
+2018-11-26 11:45:41.792 [Thread-38] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543203045808 paused.
+2018-11-26 11:45:41.797 [Thread-38] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2018-11-26 11:45:41.797 [Thread-38] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2018-11-26 11:45:41.797 [Thread-38] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543203045808 shutting down.
+2018-11-26 11:45:41.797 [Thread-38] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543203045808 paused.
+2018-11-26 11:45:41.798 [Thread-38] INFO  org.quartz.core.QuartzScheduler - Scheduler clusteredScheduler_$_felix1543203045808 shutdown complete.
+2018-11-26 11:45:41.799 [Thread-38] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-26 11:45:41.815 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-11-26 11:45:41.820 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-11-26 15:26:46.618 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 123
+2018-11-26 15:26:49.621 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE
+2018-11-26 15:34:15.217 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - java.util.concurrent.CompletableFuture@7ae0a9ec[Completed normally]
+2018-11-26 15:35:51.278 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - java.util.concurrent.CompletableFuture@7ae0a9ec[Completed normally]
+2018-11-26 15:56:44.852 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 
+2018-11-26 15:59:26.910 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 
+2018-11-26 15:59:54.171 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE
+2018-11-26 15:59:54.173 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 
+2018-11-26 16:00:41.710 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE
+2018-11-26 16:00:51.828 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 
+2018-11-26 16:02:35.933 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE
+2018-11-26 16:02:35.935 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 
+2018-11-26 16:02:52.688 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE
+2018-11-26 16:02:52.690 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message upon cancel
+2018-11-26 16:09:54.631 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither123
+2018-11-26 16:10:24.665 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:12:36.947 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:12:36.951 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:14:01.387 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:14:01.391 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:16:30.483 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:16:30.489 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:16:48.138 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:16:48.142 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:16:55.783 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:16:55.787 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:17:04.711 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:19:04.674 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:19:05.961 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:22:32.523 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:22:34.947 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:25:18.570 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:26:59.426 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:26:59.440 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:27:22.247 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:27:47.170 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:27:54.107 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - message from applyToEither
+2018-11-26 16:30:24.133 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:30:39.130 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:30:41.031 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:31:03.191 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:31:07.521 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:34:58.610 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 结果为：null
+2018-11-26 16:35:26.337 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 结果为：null
+2018-11-26 16:35:59.210 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 结果为：null
+2018-11-26 16:36:15.980 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 结果为：MESSAGEacceptEither
+2018-11-26 16:37:07.930 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 结果为：MESSAGEacceptEither
+2018-11-26 16:37:34.938 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 结果为：MESSAGEacceptEither
+2018-11-26 16:42:05.655 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:42:05.659 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:42:43.045 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:42:43.048 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:46:16.154 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:46:16.161 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:46:24.344 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:46:24.348 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:46:47.491 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:46:47.493 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:47:06.621 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:47:06.624 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:47:23.393 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:47:23.396 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:49:16.155 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 结果为：done
+2018-11-26 16:51:01.147 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 结果为：MESSAGEdone
+2018-11-26 16:54:23.966 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:54:23.968 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:56:50.717 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:56:50.720 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:57:16.465 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:57:20.428 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:57:22.677 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:57:25.003 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:57:27.193 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:57:29.300 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:57:31.498 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:59:05.772 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:59:08.664 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:59:11.108 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:59:13.357 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:59:15.637 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:59:19.599 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:59:22.506 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 16:59:25.087 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 17:00:27.067 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 123
+2018-11-26 17:00:31.768 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 123
+2018-11-26 17:00:34.033 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - 123
+2018-11-26 17:00:49.105 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 17:00:51.237 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 17:00:53.218 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 17:00:55.605 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 17:00:58.504 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - MESSAGE from applyToEither
+2018-11-26 17:05:20.500 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - done
+2018-11-26 17:06:28.235 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - donedonedone
+2018-11-26 17:18:00.486 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@47f9738
+2018-11-26 17:18:26.039 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@47f9738
+2018-11-26 17:18:26.047 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[]
+2018-11-26 17:18:26.058 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[]
+2018-11-26 17:18:26.058 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[],返回值为：0
+2018-11-26 17:19:13.047 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@47f9738
+2018-11-26 17:19:13.056 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 2]
+2018-11-26 17:19:13.067 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 2]
+2018-11-26 17:19:13.067 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 2],返回值为：0
+2018-11-26 17:20:10.823 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@47f9738
+2018-11-26 17:20:10.829 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 2]
+2018-11-26 17:20:10.840 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 2]
+2018-11-26 17:20:10.840 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 2],返回值为：1
+2018-11-26 17:20:20.444 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@47f9738
+2018-11-26 17:20:20.451 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 0]
+2018-11-26 17:20:20.463 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 0]
+2018-11-26 17:20:20.463 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 0],返回值为：2147483647
+2018-11-26 17:20:38.877 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@47f9738
+2018-11-26 17:20:38.884 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 0]
+2018-11-26 17:20:38.894 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 0]
+2018-11-26 17:20:38.894 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div异常增强，参数为：[1, 0],异常为：/ by zero
+2018-11-26 17:20:56.736 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@3af37506
+2018-11-26 17:34:19.566 [main] INFO  c.felix.springbootdemo.test.CompletableFutureDemo - donedonedone
+2018-11-26 17:39:26.149 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@1f86099a
+2018-11-26 17:41:35.250 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 0]
+2018-11-26 17:44:06.346 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 0]
+2018-11-26 17:44:52.488 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div异常增强，参数为：[1, 0],异常为：/ by zero
+2018-11-26 17:47:01.599 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@77bb0ab5
+2018-11-26 17:53:39.034 [main] INFO  com.felix.springbootdemo.config.Test - com.felix.springbootdemo.test.MathTest@210f0cc1
+2018-11-26 18:00:44.260 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div前置增强，参数为：[1, 1]
+2018-11-26 18:05:36.885 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div后置增强，参数为：[1, 1]
+2018-11-26 18:06:38.426 [main] INFO  com.felix.springbootdemo.aspects.MathAspect - 方法div返回增强，参数为：[1, 1],返回值为：1

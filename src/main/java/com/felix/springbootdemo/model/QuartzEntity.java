@@ -8,11 +8,6 @@ package com.felix.springbootdemo.model;
 
         import java.io.Serializable;
 
-/**
- * 任务类
- * 创建者	张志朋
- * 创建时间	2018年3月28日
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

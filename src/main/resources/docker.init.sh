@@ -8,7 +8,7 @@
 sudo apt remove docker-ce
 sudo rm -rf /var/lib/docker
 # step 1: 安装相关组件和配置yum源
-sudo apt update -Y
+sudo apt update
 # step 2: 配置缓存
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -21,7 +21,7 @@ sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors": ["https://3itj1ym2.mirror.aliyuncs.com"],
-  "insecure-registries": ["192.168.199.116"],
+  "insecure-registries": ["192.168.199.201"],
   "hosts": [
     "tcp://0.0.0.0:2375",
     "unix:///var/run/docker.sock"
@@ -43,6 +43,6 @@ sudo systemctl restart docker
 
 docker run -d --name="openresty" -p 80:80 -v /usr/local/openresty/nginx/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro -v /usr/local/openresty/nginx/logs/Work/opt/local/openresty/logs:/usr/local/openresty/nginx/logs -v /user/local/openresty/conf.d:/etc/nginx/conf.d -v /user/local/openresty/html:/etc/nginx/html openresty/openresty:alpine
 
-
+docker run -d -p 9000:9000 --restart=always --name prtainer-test docker.io/portainer/portainer
 
 

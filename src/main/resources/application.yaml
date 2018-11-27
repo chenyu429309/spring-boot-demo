@@ -1,10 +1,14 @@
 spring:
   profiles:
-    active: test
+    active: gs
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   swagger:
     enabled: true
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 10MB
   quartz:
     #相关属性配置
     properties:
@@ -15,31 +19,36 @@ spring:
             instanceId: AUTO
           jobStore:
             class: org.quartz.impl.jdbcjobstore.JobStoreTX
-            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
             tablePrefix: QRTZ_
             isClustered: true
             clusterCheckinInterval: 10000
-            useProperties: false
+            useProperties: true
           threadPool:
             class: org.quartz.simpl.SimpleThreadPool
             threadCount: 10
             threadPriority: 5
             threadsInheritContextClassLoaderOfInitializingThread: true
       #初始化表结构
-    jdbc:
-      initialize-schema: always
+#    jdbc:
+#      initialize-schema: always
       #数据库方式
     job-store-type: jdbc
   devtools:
     restart:
       enabled: true
+  aop:
+    proxy-target-class: true
+    auto: true
 mybatis:
   type-aliases-package: com.felix.springbootdemo.mapper
   configuration:
     #驼峰命名规范 如：数据库字段是  order_id 那么 实体字段就要写成 orderId
     map-underscore-to-camel-case: true
+    #设置全局默认类型转换
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
   #配置xml位置
-  #mapper-locations: classpath:com/battcn/mapper/*.xml
+  mapper-locations: classpath:/mapper/*mapper.xml
 logging:
   level:
     com.felix.springbootdemo.mapper: debug
@@ -48,5 +57,30 @@ pagehelper:
   params: count
   #分页合理化参数，默认值为false。当该参数设置为 true 时，pageNum<=0 时会查询第一页， pageNum>pages（超过总数时），会查询最后一页。默认false 时，直接根据参数进行查询。
   reasonable: false
-  #支持通过 Mapper 接口参数来传递分页参数，默认值false，分页插件会从查询方法的参数值中，自动根据上面 params 配置的字段中取值，查找到合适的值时就会自动分页
+  #支持通过 mapper 接口参数来传递分页参数，默认值false，分页插件会从查询方法的参数值中，自动根据上面 params 配置的字段中取值，查找到合适的值时就会自动分页
   support-methods-arguments: true
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*mapper.xml
+  type-enums-package: com.felix.springbootdemo.enums
+  type-aliases-package: com.felix.springbootdemo.mapper
+  global-config:
+    #刷新mapper 调试神器
+    refresh: true
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: auto
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: not_empty
+      #驼峰下划线转换
+      column-underline: true
+      #数据库大写下划线转换
+      capital-mode: false
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: postgre_sql
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+

@@ -2,11 +2,13 @@ package com.felix.springbootdemo;
 
 import com.felix.springbootdemo.enums.UserSexEnum;
 import com.felix.springbootdemo.model.User;
+import com.felix.springbootdemo.test.MathTest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -26,7 +28,8 @@ public class SpringBootDemoApplicationTests {
 
     @Autowired
     private RedisTemplate<String, Serializable> redisCacheTemplate;
-
+    @Autowired
+    private ApplicationContext applicationContext;
 
     @Test
     public void get() {
@@ -56,6 +59,9 @@ public class SpringBootDemoApplicationTests {
 
     @Test
     public void contextLoads() {
+        MathTest bean = applicationContext.getBean(MathTest.class);
+        log.info("MathTest：{}", bean);
+
     }
 
 }

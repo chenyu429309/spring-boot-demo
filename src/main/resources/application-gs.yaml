@@ -2,12 +2,12 @@ spring:
   datasource:
     username: postgres
     password: 123456
-    url: jdbc:postgresql://192.168.199.201/postgres?currentSchema=quartz&prepareThreshold=0&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:postgresql://localhost/postgres?currentSchema=quartz&prepareThreshold=0&useUnicode=true&characterEncoding=UTF-8
   redis:
     database: 0
-    password: 123456
-    port: 6379
-    host: 192.168.199.201
+    password: thisisredis
+    port: 9999
+    host: 192.168.0.227
     lettuce:
       pool:
         # 连接池中的最大空闲连接 默认 8
@@ -30,11 +30,11 @@ spring:
   swagger:
     enabled: true
   rabbitmq:
-    host: 192.168.199.201
-    username: felix
-    password: felix
+    host: 172.31.175.38
+    username: rabbithlt
+    password: sonic333
     port: 5672
-    virtual-host: /
+    virtual-host: yiye_prod
     # 手动ACK 不开启自动ACK模式,目的是防止报错后未正确处理消息丢失 默认 为 none
     listener:
       simple:

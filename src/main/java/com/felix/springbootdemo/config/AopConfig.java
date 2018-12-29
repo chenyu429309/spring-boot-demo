@@ -3,6 +3,7 @@ package com.felix.springbootdemo.config;
 import com.felix.springbootdemo.aspects.MathAspect;
 import com.felix.springbootdemo.test.MathTest;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 

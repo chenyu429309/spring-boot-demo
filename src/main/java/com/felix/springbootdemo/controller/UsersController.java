@@ -62,11 +62,7 @@ public class UsersController extends ApiController {
     }
     @PostMapping(value = "/insert")
     @ApiOperation(value = "插入（DONE）")
-    public R<Object> insert(@Valid OrderReqParam orderReqParam, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            log.error("{}", bindingResult.getFieldError().getDefaultMessage());
-            return failed(bindingResult.getFieldError().getDefaultMessage());
-        }
+    public R<Object> insert(@Valid OrderReqParam orderReqParam) {
         AloneTpe.valueOf(orderReqParam.getType().name()).order(orderReqParam,applicationContext);
         return success("SUCCESS");
     }

@@ -45,12 +45,11 @@ public class Users extends Model<Users> {
     private Sex userSex;
     @TableField(value = "created_at")
     private LocalDateTime createdAt;
-    @TableField(value = "updated_at",fill = FieldFill.UPDATE)
+    @TableField(value = "updated_at", fill = FieldFill.UPDATE)
     private LocalDateTime updatedAt;
     @Version
     @TableField(value = "version")
     private Integer version;
-
 
     @Override
     protected Serializable pkVal() {

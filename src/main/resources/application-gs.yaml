@@ -30,11 +30,11 @@ spring:
   swagger:
     enabled: true
   rabbitmq:
-    host: 172.31.175.38
-    username: rabbithlt
-    password: sonic333
+    host: 127.0.0.1
+    username: felix
+    password: felix
     port: 5672
-    virtual-host: yiye_prod
+    virtual-host: /
     # 手动ACK 不开启自动ACK模式,目的是防止报错后未正确处理消息丢失 默认 为 none
     listener:
       simple:
@@ -42,4 +42,4 @@ spring:
       #template:
       # exchange: hat.direct.exchange
 server:
-  port: 8888
+  port: 1234

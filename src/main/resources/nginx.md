@@ -29,10 +29,10 @@
 
         docker run \
           --name myNginx \
+          --net host \
           -d -p 80:80 \
-          -v /data/nginx/html:/usr/share/nginx/html \
-          -v /data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro \
-          -v /data/nginx/conf.d:/etc/nginx/conf.d \
+          -v /home/felix/work/info/docker-compose/info/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+          -v /home/felix/work/info/docker-compose/info/nginx/conf.d:/etc/nginx/conf.d \
           nginx
 
 
